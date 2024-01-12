@@ -1,22 +1,3 @@
-:root {
-  /* Dark Mode */
-  --Calc-bg-dark: #010101;
-  /* Calculator */
-  --Calc-btn-dark: #161616;
-  --Calc-btn-dark-red: #ff6d6d;
-  --Calc-btn-dark-green: #338507;
-  --Calc-btn-dark-white: #faf9ff;
-
-  /* Light Mode */
-  --Calc-bg-light: #fcfcfc;
-  /* Calculator */
-  --Calc-btn-light: #efeef3;
-  --Calc-btn-light-red: #e13e39;
-  --Calc-btn-light-green: #41a50f;
-  --Calc-btn-light-white: #faf9ff;
-  --Calc-btn-light-black: #010101;
-}
-
 .app-container {
   display: flex;
   flex-direction: column;
@@ -39,5 +20,4 @@
 .history-container {
   flex: 1;
   overflow: auto;
-  /* padding: 10px; */
 }

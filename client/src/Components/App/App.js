@@ -12,6 +12,7 @@ import { moon } from 'ionicons/icons';
 function App() {
   const [darkMode, setDarkMode] = useState(true)
   const [direction, setDirection] = useState('ltr')
+  const [displayValue, setDisplayValue] = useState('');
 
   return (
     <div className="app-container">
@@ -27,7 +28,7 @@ function App() {
         {direction === 'ltr' ? (
           <>
             <div className="calculator-container">
-              <Calculator darkMode={darkMode} />
+              <Calculator darkMode={darkMode} displayValue={displayValue} setDisplayValue={setDisplayValue} />
             </div>
             <div className="history-container">
               <History darkMode={darkMode} />
@@ -39,7 +40,7 @@ function App() {
               <History darkMode={darkMode} />
             </div>
             <div className="calculator-container">
-              <Calculator darkMode={darkMode} />
+              <Calculator darkMode={darkMode} displayValue={displayValue} setDisplayValue={setDisplayValue} />
             </div>
           </>
         )}

@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as math from 'mathjs';
 
 import './Calculator.css';
 
-function Calculator({ darkMode }) {
-  const [displayValue, setDisplayValue] = useState('');
+function Calculator({ darkMode, displayValue, setDisplayValue }) {
 
   const appendToDisplay = (value) => {
     if (
