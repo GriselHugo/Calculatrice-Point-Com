@@ -18,6 +18,10 @@
   overflow: scroll;
 }
 
+.selected {
+  border: 1px solid green;
+}
+
 .dark-mode {
   background-color: #282c34;
   color: white;
@@ -39,6 +43,6 @@
 }
 
 .calculation-result {
-  direction: rtl;
+  text-align: right;
   font-weight: bold;
 }

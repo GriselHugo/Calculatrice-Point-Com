@@ -124,6 +124,7 @@ function App() {
                 calculations={calculations}
                 deleteCalculation={deleteCalculation}
                 deleteAllCalculations={deleteAllCalculations}
+                setDisplayValue={setDisplayValue}
               />
             </div>
           </>
@@ -135,6 +136,7 @@ function App() {
                 calculations={calculations}
                 deleteCalculation={deleteCalculation}
                 deleteAllCalculations={deleteAllCalculations}
+                setDisplayValue={setDisplayValue}
               />
             </div>
             <div className="calculator-container">
