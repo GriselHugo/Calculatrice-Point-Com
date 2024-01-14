@@ -3,6 +3,19 @@
 .history {
   height: 100%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculations-container {
+  width: 400px;
+  aspect-ratio: 2 / 3;
+  /* margin: 0 auto; */
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid red;
+  overflow: scroll;
 }
 
 .dark-mode {
@@ -13,4 +26,19 @@
 .light-mode {
   background-color: #fcfcfc;
   color: black;
+}
+
+.calculation {
+  border-bottom: 1px dotted var(--Calc-btn-dark);
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.calculation-calculation {
+  font-style: italic;
+}
+
+.calculation-result {
+  direction: rtl;
+  font-weight: bold;
 }

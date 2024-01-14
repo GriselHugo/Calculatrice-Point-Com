@@ -1,9 +1,8 @@
 import React from 'react';
-import * as math from 'mathjs';
 
 import './Calculator.css';
 
-function Calculator({ darkMode, displayValue, setDisplayValue }) {
+function Calculator({ darkMode, displayValue, setDisplayValue, calculateResult }) {
 
   const appendToDisplay = (value) => {
     if (
@@ -20,15 +19,6 @@ function Calculator({ darkMode, displayValue, setDisplayValue }) {
 
   const clearDisplay = () => {
     setDisplayValue('');
-  };
-
-  const calculateResult = () => {
-    try {
-      const result = math.evaluate(displayValue);
-      setDisplayValue(result.toString());
-    } catch (error) {
-      setDisplayValue('Error');
-    }
   };
 
   const buttonConfig = [

@@ -23,6 +23,10 @@ input {
   font-size: 2rem;
 }
 
+input:focus {
+  outline: none;
+}
+
 .grid-container {
   display: grid;
   grid-template: repeat(4, 1fr) 1fr / repeat(4, 1fr);
