@@ -108,47 +108,27 @@ function App() {
         </button>
       </div>
       <div className="content-container">
-        {direction === 'ltr' ? (
-          <>
-            <div className="calculator-container">
-              <Calculator
-                darkMode={darkMode}
-                displayValue={displayValue}
-                setDisplayValue={setDisplayValue}
-                calculateResult={calculateResult}
-              />
-            </div>
-            <div className="history-container">
-              <History
-                darkMode={darkMode}
-                calculations={calculations}
-                deleteCalculation={deleteCalculation}
-                deleteAllCalculations={deleteAllCalculations}
-                setDisplayValue={setDisplayValue}
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="history-container">
-              <History
-                darkMode={darkMode}
-                calculations={calculations}
-                deleteCalculation={deleteCalculation}
-                deleteAllCalculations={deleteAllCalculations}
-                setDisplayValue={setDisplayValue}
-              />
-            </div>
-            <div className="calculator-container">
-              <Calculator
-              darkMode={darkMode}
-              displayValue={displayValue}
-              setDisplayValue={setDisplayValue}
-              calculateResult={calculateResult}
-            />
-            </div>
-          </>
-        )}
+        <div className="calculator-container"
+          style={{ order: direction === 'ltr' ? 1 : 2 }}
+        >
+          <Calculator
+            darkMode={darkMode}
+            displayValue={displayValue}
+            setDisplayValue={setDisplayValue}
+            calculateResult={calculateResult}
+          />
+        </div>
+        <div className="history-container"
+          style={{ order: direction === 'ltr' ? 2 : 1 }}
+        >
+          <History
+            darkMode={darkMode}
+            calculations={calculations}
+            deleteCalculation={deleteCalculation}
+            deleteAllCalculations={deleteAllCalculations}
+            setDisplayValue={setDisplayValue}
+          />
+        </div>
       </div>
     </div>
   );

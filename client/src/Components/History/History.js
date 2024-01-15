@@ -25,13 +25,17 @@ function History({ darkMode, calculations, deleteCalculation, deleteAllCalculati
 
   return (
     <div className={`history ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-      <div className="calculations-container">
+      <div>
+      <div className="calculations-container" style={{ border: darkMode ? '1px solid #cccccc' : '1px solid #333333' }}>
         {
           calculations.map((calculation) => (
             <div
               key={calculation.id}
               onClick={() => selectCalculation(calculation)}
-              className={`calculation ${selectedCalculation === calculation ? 'selected' : ''}`}
+              className={`calculation
+                ${darkMode ? 'dark-mode' : 'light-mode'}
+                ${selectedCalculation === calculation ? 'selected' : ''}
+              `}
             >
               <div className="calculation-calculation">{calculation.calculation}</div>
               <div className="calculation-result">{calculation.result}</div>
@@ -49,6 +53,7 @@ function History({ darkMode, calculations, deleteCalculation, deleteAllCalculati
           deleteCalculationDisplay &&
             <button className="delete-button" onClick={() => deleteCalculation(selectedCalculation.id)}>Delete</button>
         }
+      </div>
       </div>
     </div>
   );
